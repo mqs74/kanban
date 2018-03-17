@@ -1,0 +1,273 @@
+.KanbanBoard {
+  margin:0px;padding:0px;
+  width:100%;
+  border:2px solid #ffffff;
+
+  -moz-border-radius-bottomleft:0px;
+  -webkit-border-bottom-left-radius:0px;
+  border-bottom-left-radius:0px;
+
+  -moz-border-radius-bottomright:0px;
+  -webkit-border-bottom-right-radius:0px;
+  border-bottom-right-radius:0px;
+
+  -moz-border-radius-topright:0px;
+  -webkit-border-top-right-radius:0px;
+  border-top-right-radius:0px;
+
+  -moz-border-radius-topleft:0px;
+  -webkit-border-top-left-radius:0px;
+  border-top-left-radius:0px;
+}
+
+.KanbanBoard table{
+  border-spacing: 0;
+  width:100%;
+  height:100%;
+  margin:0px;
+  padding:0px;
+}
+
+.lane-even { background-color:#D0D8E7; }
+/* , .KanbanBoard  #lane-1, .KanbanBoard #lane-3, .KanbanBoard #lane-5 */
+
+.lane-odd { background-color:#E9EDF4; }
+/* , .KanbanBoard  #lane-2, .KanbanBoard #lane-4, .KanbanBoard #lane-6 */
+
+.KanbanBoard td{
+  vertical-align:top;
+  border:2px solid #ffffff;
+  border-width:1px 1px 1px 1px;
+  text-align:left;
+  padding:1px;
+  font-size:10px;
+  font-family:Verdana;
+  font-weight:normal;
+  color:#000000;
+}
+
+.KanbanBoard td:first-child {
+  vertical-align:center;
+  background:-o-linear-gradient(bottom, #5182BB 5%, #5182BB 100%);
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5182BB), color-stop(1, #5182BB) );
+  background:-moz-linear-gradient( center top, #5182BB 5%, #5182BB 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5182BB", endColorstr="#5182BB");
+  background: -o-linear-gradient(top,#5182BB,4a89dc);
+  background-color:#5182BB;
+  text-align:center;
+  font-size:14px;
+  font-family:Verdana;
+  font-weight:bold;
+  color:#ffffff;
+}
+
+
+.KanbanBoard thead th {
+  background:-o-linear-gradient(bottom, #5182BB 5%, #5182BB 100%);
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5182BB), color-stop(1, #5182BB) );
+  background:-moz-linear-gradient( center top, #5182BB 5%, #5182BB 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5182BB", endColorstr="#5182BB");
+  background: -o-linear-gradient(top,#5182BB,4a89dc);
+  background-color:#5182BB;
+  border:0px solid #ffffff;
+  text-align:center;
+  border-width:0px 1px 0px 1px;
+  font-size:14px;
+  font-family:Verdana;
+  font-weight:bold;
+  color:#ffffff;
+}
+
+.KanbanBoard thead a {
+  color: white;
+}
+
+.KanbanBoard thead th:last-child { margin-botton: 2px; }
+
+.generated {
+  font-style: italic;
+  float: right;
+}
+
+.release-date {
+  font-size: 12px;
+  font-weight:normal;
+}
+
+.card {
+  position:relative;
+  float: left;
+  width: 90px;
+  height: 40px;
+
+  background-color: #fff;
+  border: 2px solid #808080;
+  border-radius: 5px;
+
+  margin: 2px 2px;
+
+  line-height: 1.42857;
+  transition: border 0.2s ease-in-out 0s;
+
+  box-shadow: 2px 2px 3px #888888;
+}
+
+.state-backlog  .card,
+.state-dev-q  .card,
+.state-qa-q  .card,
+.state-waiting  .card,
+.state-ready  .card,
+.state-done .card
+{
+  width: 45px;
+  height: 40px;
+}
+
+.state-analyse  .cs-team,
+.state-analyse  .qa-team,
+.state-analyse  .dev-team,
+.state-analyse  .ta-team
+{
+  box-shadow: 2px 2px 3px yellow;
+}
+
+.current-release  {
+  background-color: #009E73;
+}
+
+.prev-release  {
+  background-color: #56B4E9;
+}
+
+.next-release  {
+  background-color: #F0E442;
+}
+
+.top-priority  {
+  border: 2px solid red;
+}
+
+.internal  {
+  border: 2px solid white;
+  background-color: #CCCCCC;
+}
+
+.blocker  {
+  border: 2px solid red;
+}
+
+.enhancement {
+  border-radius: 0px;
+}
+
+.card-priority {
+  float: left;
+  margin: -3px 0 0 -3px;
+  background-color: #777;
+  border-radius: 10px;
+  color: #fff;
+  display: inline-block;
+  line-height: 1;
+  min-width: 10px;
+  padding: 2px 2px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+
+.card-priority-A0{
+  background-color: red;
+  border: 0px solid white;
+  color: #000;
+}
+
+.card-priority-A1{
+  background-color: red;
+  color: #000;
+}
+
+.card-priority-A2{
+  background-color: #ff8000;
+  color: #000;
+}
+
+.card-priority-B1{
+  background-color: red;
+  color: #000;
+}
+
+.card-priority-B2{
+  background-color: #ff8000;
+  color: #000;
+}
+
+.card-priority-B3{
+  background-color: yellow;
+  color: #000;
+}
+
+.card-priority-B4{
+  background-color: yellow;
+  color: #000;
+}
+
+.card-priority-P1{
+  background-color: red;
+  color: #000;
+}
+
+.card-priority-P2{
+  background-color: yellow;
+  color: #000;
+}
+
+.card-ext-id {
+  float: left;
+}
+
+.card-int-id {
+  float: left;
+}
+
+.card-entered-flow {
+  display: none;
+}
+
+.card-entered-column  {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: auto;
+  padding-left: 2px;
+  background-color: white;
+  text-align:right;
+  border-radius: 4px;
+}
+
+.KanbanBoard td.current-release,
+.current-release .card-entered-flow,
+.current-release .card-entered-column {
+  background-color: #009E73;
+  background: #009E73;
+}
+
+.KanbanBoard td.prev-release,
+.prev-release .card-entered-flow,
+.prev-release .card-entered-column {
+  background-color: #56B4E9;
+  background: #56B4E9;
+}
+
+.KanbanBoard td.next-release,
+.next-release .card-entered-flow,
+.next-release .card-entered-column {
+  background-color: #F0E442;
+  background: #F0E442;
+  color: #000000;
+}
+
+.internal .card-entered-column,
+.internal .card-entered-flow  {
+  background-color: #CCCCCC;
+}

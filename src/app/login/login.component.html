@@ -1,0 +1,37 @@
+<div class="ui stackable grid container">
+  <div class="ui main text container ten wide column">
+    <br><br>
+    <div class="ui raised segment">
+      <h2 class="ui header">Kanban Board</h2>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" class="ui fluid form">
+        <div class="field">
+          <label for="username">JIRA login:</label>
+          <div class="ui pointing below red basic label" *ngIf="loginMessage">Please enter a value</div>
+          <input type="text"
+                 id="username"
+                 placeholder="login"
+                name="sku" #username>
+        </div>
+        <div class="field">
+          <label for="password">JIRA password:</label>
+          <div class="ui pointing below red basic label" *ngIf="passwordMessage">Please enter a value</div>
+          <input type="password"
+                 id="password"
+                 placeholder="password"
+                 name="sku" #password>
+        </div>
+        <table>
+          <tr>
+            <td>
+              <button type="submit" class="ui blue button" (click)="login(username.value, password.value)" *ngIf="loading==false">Submit</button>
+              <button type="submit" class="ui blue loading button" *ngIf="loading==true">Submit</button>
+            </td>
+            <td>
+              <div class="ui red message" *ngIf="message"> {{message}}</div>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
