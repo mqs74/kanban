@@ -25,11 +25,8 @@ export class LoginComponent {
     if(!this.validateInputFields(login, password))
       return;
 
-    if(this.authService.isLoggedIn()) {
-      this.setMessage('User is already logged');
+    if(this.authService.isLoggedIn())
       this.authService.logout();
-      return;
-    }
 
     this.message = '';
     this.loading = true;
@@ -52,11 +49,6 @@ export class LoginComponent {
         this.loading = false;
       },
       ()=>console.log("Done."));
-  }
-
-  logout(): boolean {
-    this.authService.logout();
-    return false;
   }
 
   onSubmit(form: any): void {

@@ -7,4 +7,10 @@ export class Utils {
     }
     return true;
   }
+
+  static getBoolean(value: string): boolean {
+    if(value === "true")
+      return true;
+    return false;
+  }
 }

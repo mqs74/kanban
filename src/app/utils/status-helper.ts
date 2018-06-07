@@ -29,7 +29,7 @@ export class StatusHelper {
       for(let item of history.items) {
         if(ChangelogHelper.isHistoryFieldChanged(item, StatusHelper.STATUS_FIELD)) {
           // status changed
-          status.stateTo = item.toString;
+          //status.stateTo = item.toString;
           status.stateFrom = item.fromString;
           issueStatus.stateUpdated = history.created;
 
@@ -41,12 +41,12 @@ export class StatusHelper {
           }
         } else if(ChangelogHelper.isHistoryFieldChanged(item, StatusHelper.ASSIGNEE_FIELD)) {
           // assignee changed
-          status.assigneeTo = item.toString;
+          //status.assigneeTo = item.toString;
           status.stateFrom = item.fromString;
           issueStatus.assigneeUpdated = history.created;
         } else if(ChangelogHelper.isHistoryFieldChanged(item, StatusHelper.RESOLUTION_FIELD)) {
           // resolution has been set
-          status.resolution = item.toString;
+          //status.resolution = item.toString;
         } else if(ChangelogHelper.isHistoryFieldSet(item, StatusHelper.FIX_VERSION_FIELD)) {
           // Check how many times the fixed version has rolled over after the last resolution moment
           // 2. Fix version has been changed/assigned

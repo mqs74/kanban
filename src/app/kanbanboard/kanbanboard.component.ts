@@ -25,6 +25,10 @@ export class KanbanboardComponent implements OnInit {
     this.queryResult = [];
   }
 
+  logoutAction() {
+    this.authService.logout();
+  }
+
   private searchData(inputPage: number, inputPages: number) {
     var page = inputPage;
     var pages = inputPages;
@@ -76,16 +80,21 @@ export class KanbanboardComponent implements OnInit {
     );
   }
 
+  private processReport() {
+    console.log('Processing report, number of issues=[' + this.queryResult.length + ']');
+  }
+
   ngOnInit() {
     if(!this.authService.isLoggedIn())
       this.router.navigate(['/'], {relativeTo: this.route});
 
     this.userDisplayName = this.authService.getUserData().displayName;
-
     this.searchData(1, 1);
   }
 
-  private processReport() {
-    console.log('Processing report, number of issues=[' + this.queryResult.length + ']');
-  }
+
+  // @HostListener('window:beforeunload', ['$event'])
+  // beforeunloadHandler(event) {
+  //   sessionStorage.setItem("kanbanboardExit", "false");
+  // }
 }

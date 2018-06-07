@@ -37,12 +37,6 @@ export class AuthService {
       console.log('Mapped URL: ', urls.size48); // uncomment if you want to debug
 
       return this.userData;
-      // return new UserData({
-      //   self: data.self,
-      //   name: data.name,
-      //   displayName: data.displayName,
-      //   emailAddress: data.emailAddress
-      // })
     }).
     catch((error: any) => Observable.throw(error));
   }
@@ -60,7 +54,7 @@ export class AuthService {
   }
 
   public getUserLogin(): string {
-    return localStorage.getItem(AuthService.USER_LOGIN);
+    return sessionStorage.getItem(AuthService.USER_LOGIN);
   }
 
   public getUserData(): UserData {
@@ -68,23 +62,23 @@ export class AuthService {
   }
 
   public getCredentials(): string {
-    return localStorage.getItem(AuthService.USER_CREDENTIALS);
+    return sessionStorage.getItem(AuthService.USER_CREDENTIALS);
   }
 
   private setUserLogin(login: string) {
-    localStorage.setItem(AuthService.USER_LOGIN, login);
+    sessionStorage.setItem(AuthService.USER_LOGIN, login);
   }
 
   private removeUserLogin() {
-    localStorage.removeItem(AuthService.USER_LOGIN);
+    sessionStorage.removeItem(AuthService.USER_LOGIN);
   }
 
   private setCredentials(credentials: string) {
-    localStorage.setItem(AuthService.USER_CREDENTIALS, credentials);
+    sessionStorage.setItem(AuthService.USER_CREDENTIALS, credentials);
   }
 
   private removeCredentials() {
-    localStorage.removeItem(AuthService.USER_CREDENTIALS);
+    sessionStorage.removeItem(AuthService.USER_CREDENTIALS);
   }
 
   private setUserData(userData: UserData) {
