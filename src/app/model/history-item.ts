@@ -46,11 +46,11 @@ export class HistoryItem {
     this._to = value;
   }
 
-  //get toString(): string {
-  //  return this._toString;
-  //}
-  //
-  //set toString(value: string) {
-  //  this._toString = value;
-  //}
+  get toString(): string {
+   return this._toString;
+  }
+
+  set toString(value: string) {
+   this._toString = value;
+  }
 }

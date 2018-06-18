@@ -6,13 +6,13 @@ export class ChangelogHelper {
     if(Utils.isEmpty(historyItem))
       return false;
 
-    return historyItem.field === fieldName; // && !Utils.isEmpty(historyItem.toString) && historyItem.toString != '';
+    return historyItem.field === fieldName && !Utils.isEmpty(historyItem.toString) && historyItem.toString != '';
   }
 
   static isHistoryFieldChanged(historyItem: HistoryItem, fieldName: string): boolean {
     if(Utils.isEmpty(historyItem))
       return false;
 
-    return historyItem.field === fieldName; // && historyItem.fromString != historyItem.toString;
+    return historyItem.field === fieldName && historyItem.fromString !== historyItem.toString;
   }
 }

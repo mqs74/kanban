@@ -1,7 +1,7 @@
 export class Utils {
   static EMPTY_STRING = '';
 
-  static isEmpty(object: Object): boolean {
+  static isEmpty(object: any): boolean {
     if(object != (null||undefined)) {
       return false;
     }

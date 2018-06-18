@@ -4,8 +4,8 @@ import {Router, ActivatedRoute} from '@angular/router';
 import {Issue} from "../model/issue";
 import {SearchData} from "../model/search-data";
 import {StatusHelper} from "../utils/status-helper";
-import {AuthService} from "../auth.service";
-import {JiraService} from "../jira-service";
+import {AuthService} from "../services/auth.service";
+import {JiraService} from "../services/jira-service";
 
 @Component({
   selector: 'app-kanbanboard',
