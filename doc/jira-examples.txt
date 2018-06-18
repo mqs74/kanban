@@ -1,0 +1,5 @@
+SEARCH:
+
+https://helpdesk.clear2pay.com/helpdesk/rest/api/2/search?jql=((project=CSE)OR(project=CSSICI AND summary !~"CSE*" AND summary !~ "CLONE*" AND (("Task Type"=Defect AND IssueType!=Question) OR (labels="UPG_NFE")) AND (fixversion is empty OR (fixversion != "Future release" AND fixversion != "5.X")))) AND ((resolution=Unresolved) OR (resolutiondate > "2018-01-01 02:00")) 
+
+https://helpdesk.clear2pay.com/helpdesk/rest/api/2/search?jql=(key=CSSICI-26641)&expand=changelog
