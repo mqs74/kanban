@@ -1,0 +1,9 @@
+clJiraIssue.isFieldChanged() -> changelog-helper.isHistoryFieldChanged()
+clJiraIssue.isFieldSet() -> changelog-helper.isHistoryFieldSet()
+clJiraIssue.createChangeLogStatus()
+
+clKanbanCSCard.GetKanbanState() -> getKanbanState() 
+clKanbanCSCard.getTarget() ->
+clKanbanCSCard.GetAssignee() ->
+
+toHtml()
