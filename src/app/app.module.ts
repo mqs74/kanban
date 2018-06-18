@@ -6,8 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { KanbanboardComponent } from './kanbanboard/kanbanboard.component';
-import { AUTH_PROVIDERS } from './auth.service';
-import { JIRA_PROVIDERS } from "./jira-service";
+import { AUTH_PROVIDERS } from './services/auth.service';
+import { JIRA_PROVIDERS } from "./services/jira-service";
 import { IssueComponent } from './issue/issue.component';
 
 import 'rxjs/Rx';
